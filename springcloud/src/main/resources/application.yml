@@ -1,17 +1,26 @@
 spring:
   application:
-    name: feign-consumer
+#    name: feign-consumer
     #      name: ribbon-consumer
+    name: zuul-gateway
 server:
   port: 9998
-
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://peer1:8762/eureka/,http://peer2:8761/eureka/
+zuul:
+  routes:
+    api-gateway:
+      path:
+        /api/**
+      serviceId:
+        HELLO-SERVICE
+#      url:
+#        http://127.0.0.1:9998
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    fetch-registry: true
+#    serviceUrl:
+#      defaultZone: http://peer1:8762/eureka/,http://peer2:8761/eureka/
 ---
 spring:
   profiles: peer1
