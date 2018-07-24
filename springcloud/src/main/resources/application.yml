@@ -1,10 +1,26 @@
 spring:
   application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mxzenf/springlearn
+          username: mxzenf
+          passoword: 810314yx
+          searchPaths:
+server:
+  port: 9996
+
+---
+spring:
+  profiles: zuul
+  application:
 #    name: feign-consumer
     #      name: ribbon-consumer
     name: zuul-gateway
 server:
-  port: 9998
+  port: 9997
 zuul:
   routes:
     api-gateway:
