@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-boot-redis
+    redis:
+        host: 127.0.0.1
+        port: 6379
+        timeout: 20000
+        cluster:
+            nodes: 127.0.0.1:6378
+            maxRedirects: 6
+        pool:
+            max-active: 8
+            min-idle: 0
+            max-idle: 8
+            max-wait: -1

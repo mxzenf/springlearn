@@ -1,17 +1,33 @@
 spring:
   application:
     name: config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/mxzenf/springlearn
-          username: mxzenf
-          passoword: 810314yx
-          searchPaths:
+#  profiles:
+#    active: dev
+#  cloud:
+#    config:
+#      profile: dev
+#      lable: master
+#      server:
+#        git:
+#          uri: https://gitee.com/mxzenfyx/fastjee-config-repo
+#          username: 93839187@qq.com
+#          passoword: 810314yx
+#          searchPaths:
 server:
-  port: 9996
-
+  port: 6666
+eureka:
+  instance:
+    hostname: peer2
+    # 更改eureka更新频率, 关闭eureka的自我保护机制.
+    leaseRenewalIntervalInSeconds: 5 # 租期更新时间间隔(默认30秒)
+    leaseExpirationDurationInSeconds: 20 # 租期到期时间(默认90秒)
+  client:
+    serviceUrl:
+      defaultZone: http://fastjee-registration.com:5000/eureka/
+    healthcheck:
+      enabled: true # 开启健康检查（需要spring-boot-starter-actuator依赖）
+logging:
+  config: classpath:logback.xml
 ---
 spring:
   profiles: zuul

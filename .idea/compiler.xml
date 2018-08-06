@@ -3,7 +3,7 @@
   <component name="CompilerConfiguration">
     <resourceExtensions />
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
+      <profile default="true" name="Default" enabled="true">
         <processorPath useClasspath="true" />
       </profile>
       <profile default="false" name="Maven default annotation processors profile" enabled="true">
@@ -11,11 +11,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="spring" />
+        <module name="springbatch" />
+        <module name="springcloud" />
+        <module name="springdata" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="spring" target="1.5" />
+      <module name="gitconfig" target="1.8" />
+      <module name="spring" target="1.8" />
+      <module name="springbatch" target="1.8" />
+      <module name="springcloud" target="1.8" />
+      <module name="springdata" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

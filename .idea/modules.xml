@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring.iml" filepath="$PROJECT_DIR$/spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbatch/springbatch.iml" filepath="$PROJECT_DIR$/springbatch/springbatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud/springcloud.iml" filepath="$PROJECT_DIR$/springcloud/springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springdata/springdata.iml" filepath="$PROJECT_DIR$/springdata/springdata.iml" />
     </modules>
   </component>
 </project>
